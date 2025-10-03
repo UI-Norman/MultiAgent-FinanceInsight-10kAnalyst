@@ -1,19 +1,3 @@
-<!-- # 1. Setup
-python -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-
-# 2. Start services
-docker-compose up -d postgres redis
-
-# 3. Index 10-Ks
-python data/seed_data.py --ticker NVDA --years 5
-
-# 4. Run analysis
-python main.py analyze NVDA
-
-# 5. Interactive mode
-python main.py chat NVDA -->
 # 🤖 Multi-Agent Financial Analysis System
 
 A production-ready multi-agent system for analyzing US-listed companies using SEC 10-K filings and real-time market data.
@@ -173,3 +157,6 @@ Cross-encoder model re-scores candidates for relevance:
 ```python
 # Initial retrieval: 20 candidates
 # Re-ranking
+=======
+# MultiAgent-FinanceInsight-10kAnalyst
+>>>>>>> a5037d094287f043f87167bb568962a89881bb37
