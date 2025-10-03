@@ -1,4 +1,4 @@
-version: '3.3'
+version: '3.3'  # Changed from 3.8
 
 services:
   postgres:
@@ -16,19 +16,6 @@ services:
     image: redis:7-alpine
     ports:
       - "6379:6379"
-  
-  app:
-    build: .
-    environment:
-      - DATABASE_URL=postgresql://ai:ai@postgres:5432/ai
-      - REDIS_URL=redis://redis:6379
-      - OPENAI_API_KEY=${OPENAI_API_KEY}
-    depends_on:
-      - postgres
-      - redis
-    volumes:
-      - ./data:/app/data
-    command: python main.py analyze NVDA
 
 volumes:
   postgres_data:
